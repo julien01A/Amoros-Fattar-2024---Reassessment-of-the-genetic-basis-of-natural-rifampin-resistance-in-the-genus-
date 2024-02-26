@@ -1,7 +1,9 @@
 # Titre 
 
-# Titre analyse 0 - recup. rpoB R-Om (MARIE)
+# Titre analyse 1 - recup. rpoB R-Om (MARIE)
 
-# Titre analyse 1 - phylogenomy
+# Titre analyse 2 - Annotation des génomes
 
-# Titre analyse 2 - analyses orthofinder etc
+# Titre analyse 3 - phylogenomy
+
+# Titre analyse 4 - analyses orthofinder etc
