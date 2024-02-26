@@ -4,4 +4,4 @@ In this study, we proceed **statistical analysis** of qPCR to determine the *Ric
 
 This GitHub page shares the command lines used for the statistical and genomic analysis, each in a dedicated file. 
 
-These GitHub page shares exclusively analysis maded with command lines and/or script. Additionnal assays which have been realised in specific software without command line are not presented here (eg. the Unipro UGENE software for the rpoB alignment).
+These GitHub page shares exclusively analysis carried out with command lines and/or script. Additionnal assays which have been realised in specific software without command line are not presented here (eg. the Unipro UGENE software for the rpoB alignment).
