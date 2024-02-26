@@ -16,6 +16,7 @@ with "sample_name" the name of the genome to annotate.
 
 ## 3 - Phylogenomic analyses
 
+First, single-copy orthologs (SCO) were identified using OrthoFinder (https://github.com/davidemms/OrthoFinder, Emms D.M. and Kelly S. (2019) OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biology. doi: 10.1186/s13059-019-1832-y) from a set of specimens' genomes chosen to study the phylogenetic relationships between the obtained Spiroplasma MAGs and other Spiroplasma representatives:
 
 
 ## 4 - Identification of orthogroups specific to naturally resistant-rifampin Rickettsia species
