@@ -1,6 +1,6 @@
 # Genomic analyses 
 
-## 1 - Construction of the rpoB complete gene sequence of *R. lusitaniae* R-Om
+## 1 - Construction of the *rpoB* complete gene sequence of *R. lusitaniae* R-Om
 (MARIE)
 
 
@@ -19,7 +19,7 @@ with ```"sample_name"``` the name of the genome to annotate.
 First, single-copy orthologs (SCO) were identified using OrthoFinder v2.3.11 (<https://github.com/davidemms/OrthoFinder>, Emms D.M. and Kelly S. (2019), OrthoFinder: phylogenetic orthology inference for comparative genomics. Genome Biology. doi: 10.1186/s13059-019-1832-y) from the 78 annoted genomes based on their ```.ffa``` files :
 
 ```
-orthofinder -f ./OrthoFinder_genomes/ -t 4 -S blast ## OrthoFinder_genomes being a directory including all .faa files of specimens of interest
+orthofinder -f ./OrthoFinder_genomes/ -t 4 -S blast
 ```
 
 For each SCO, sequences were individually aligned using MAFFT v7.450 (<https://github.com/GSLBiotech/mafft>, Katoh K. and Standley D.M. (213), MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular Biology and Evolution. doi: 10.1093/molbev/mst010):
