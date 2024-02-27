@@ -61,4 +61,22 @@ Finally, the phylogenetic tree was visualized and modified using figtree (<https
 
 ## 4 - Identification of orthogroups specific to naturally resistant-rifampin Rickettsia species
 
+### 4.1. Using Orthofinder
+
+
+### 4.2 Using Roary
+
+This tool compares the pangenome of a genome dataset, identifying the core genome and accessory genome. Find out more about the tool here: <https://sanger-pathogens.github.io/Roary/>. 
+
+First, we selected the ```.gff``` files generated previously with the Prokka analysis, and we used the following command line in a new folder:
+
+```
+roary -f roary_out *.gff
+```
+We download the script ```roary_plots.py``` of the Roary GitHub (<https://sanger-pathogens.github.io/Roary/>), and used:
+
+```
+python $directory_script/roary_plots.py $directory_output_roary/roary_out/accessory_binary_genes.fa.newick $directory_output_roary/roary_out/gene_presence_absence.csv
+```
+
 
