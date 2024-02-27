@@ -56,7 +56,7 @@ modeltest-ng -i SCO_concatenated.faa -p 12 -T raxml -d aa
 raxmlHPC-PTHREADS -T 8 -f a -s SCO_concatenated.faa -n phylo -m PROTGAMMAIJTT -x 1234 -# 1000 -p 1234
 ```
 
-The phylogenetic tree was visualized and modified using figtree (<https://github.com/rambaut/figtree/>).
+Finally, the phylogenetic tree was visualized and modified using figtree (<https://github.com/rambaut/figtree/>).
 
 
 ## 4 - Identification of orthogroups specific to naturally resistant-rifampin Rickettsia species
