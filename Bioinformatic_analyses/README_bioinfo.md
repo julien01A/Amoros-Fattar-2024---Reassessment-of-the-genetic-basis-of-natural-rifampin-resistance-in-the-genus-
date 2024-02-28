@@ -5,7 +5,7 @@
 
 
 ## 2 - Annotation of the *Rickettsia* genomes
-We collected a set of 78 genomes of *Rickettsia*, *Orientia* and *Cd. Megaira* from public databases (in fasta format, see Table S2 for the accession numbers used). A part of these genomes were already annotated, but we proceed a standardized annotation for all the 78 genomes using Prokka v1.14.6 (<https://github.com/tseemann/prokka>, Seemann T. (2014), Prokka: rapid prokaryotic genome annotation. Bioinformatics. doi: 10.1093/bioinformatics/btu153):
+We collected a set of **78 genomes of *Rickettsia*, *Orientia* and *Cd. Megaira*** from public databases (in fasta format, see Table S2 for the accession numbers used). A part of these genomes were already annotated, but we proceed a standardized annotation for all the 78 genomes using Prokka v1.14.6 (<https://github.com/tseemann/prokka>, Seemann T. (2014), Prokka: rapid prokaryotic genome annotation. Bioinformatics. doi: 10.1093/bioinformatics/btu153):
 
 ```
 prokka $sample_name-genome.fasta --locustag $sample_name --prefix $sample_name --outdir Prokka-$sample_name --rfam --compliant --cpus 6
@@ -63,14 +63,14 @@ Finally, the phylogenetic tree was visualized and modified using figtree (<https
 
 ### 4.1. Using Orthofinder
 
-For this Orthofinder analysis, we used a restricted dataset of 18 Rickettsia genomes (n=3 resistant and n=15 suceptible, see TableS2 for details). The command line are the same than the part above.
+For this Orthofinder analysis, we used a restricted part of the previous dataset, corresponding to **18 *Rickettsia* genomes** (n=3 resistant and n=15 suceptible, see TableS2 for details). The command line are the same than the part above.
 
 
 ### 4.2 Using Roary
 
 This tool compares the pangenome of a genome dataset, identifying the core genome and accessory genome. Find out more about the tool here: <https://sanger-pathogens.github.io/Roary/>. 
 
-First, we selected the ```.gff``` files generated previously with the Prokka analysis, and we used the following command line in a new folder:
+First, we selected the ```.gff``` files generated previously with the Prokka analysis of the 18 restricted *Rickettsia* genomes, using this following command line in a new folder:
 
 ```
 roary -f roary_out *.gff
@@ -91,7 +91,7 @@ query_pan_genome -a difference --input_set_one 1.gff,2.gff,3.gff --input_set_two
 query_pan_genome -a intersection -i 1.gff,2.gff,3.gff 3.gff,4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
 ```
 
-
+with ```"1" to "3"``` the name of the Resistant associated genomes, and with ```"1" to "15"``` the Susceptible associated genomes.
 
 
 
