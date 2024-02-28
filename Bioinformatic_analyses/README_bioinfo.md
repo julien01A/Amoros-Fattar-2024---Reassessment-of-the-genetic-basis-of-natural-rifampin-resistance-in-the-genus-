@@ -88,10 +88,10 @@ Comparison between between the 3 resistant and the 15 *Rickettsia* strains were 
 query_pan_genome -a difference --input_set_one 1.gff,2.gff,3.gff --input_set_two 3.gff,4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
 
 ## Intersection:
-query_pan_genome -a intersection -i 1.gff,2.gff,3.gff 3.gff,4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
+query_pan_genome -a intersection -i 1.gff,2.gff,3.gff 4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
 ```
 
-with ```"1" to "3"``` the name of the Resistant associated genomes, and with ```"1" to "15"``` the Susceptible associated genomes.
+with ```"1" to "3"``` the name of the Resistant associated genomes, and with ```"4" to "15"``` the Susceptible associated genomes.
 
 
 
