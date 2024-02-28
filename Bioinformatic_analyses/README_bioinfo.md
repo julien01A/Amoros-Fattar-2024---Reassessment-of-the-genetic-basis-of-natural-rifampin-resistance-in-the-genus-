@@ -5,7 +5,7 @@
 
 
 ## 2 - Annotation of the *Rickettsia* genomes
-We collected 78 genomes of *Rickettsia*, *Orientia* and *Cd. Megaira* from public databases (in fasta format, see Table S2 for the accession numbers used). A part of these genomes were already annotated, but we proceed a standardized annoation for all the 78 genomes. Thus, we (re)annoted the 78 genomes using Prokka v1.14.6 (<https://github.com/tseemann/prokka>, Seemann T. (2014), Prokka: rapid prokaryotic genome annotation. Bioinformatics. doi: 10.1093/bioinformatics/btu153) using the following command for each genome:
+We collected a set of 78 genomes of *Rickettsia*, *Orientia* and *Cd. Megaira* from public databases (in fasta format, see Table S2 for the accession numbers used). A part of these genomes were already annotated, but we proceed a standardized annotation for all the 78 genomes using Prokka v1.14.6 (<https://github.com/tseemann/prokka>, Seemann T. (2014), Prokka: rapid prokaryotic genome annotation. Bioinformatics. doi: 10.1093/bioinformatics/btu153):
 
 ```
 prokka $sample_name-genome.fasta --locustag $sample_name --prefix $sample_name --outdir Prokka-$sample_name --rfam --compliant --cpus 6
@@ -63,6 +63,8 @@ Finally, the phylogenetic tree was visualized and modified using figtree (<https
 
 ### 4.1. Using Orthofinder
 
+For this Orthofinder analysis, we used a restricted dataset of 18 Rickettsia genomes (n=3 resistant and n=15 suceptible, see TableS2 for details). The command line are the same than the part above.
+
 
 ### 4.2 Using Roary
 
@@ -73,10 +75,23 @@ First, we selected the ```.gff``` files generated previously with the Prokka ana
 ```
 roary -f roary_out *.gff
 ```
-We download the script ```roary_plots.py``` of the Roary GitHub (<https://sanger-pathogens.github.io/Roary/>), and used:
+Then, we execute the script ```roary_plots.py``` found in the Roary GitHub (<https://sanger-pathogens.github.io/Roary/>):
 
 ```
 python $directory_script/roary_plots.py $directory_output_roary/roary_out/accessory_binary_genes.fa.newick $directory_output_roary/roary_out/gene_presence_absence.csv
 ```
+
+Comparison between between the 3 resistant and the 15 Rickettsia strains were investigated using the ```query-pan-genome``` command line implemented in Roary (with the ```-a difference``` and ```-a intersection``` options)
+
+```
+## Differences :
+query_pan_genome -a difference --input_set_one 1.gff,2.gff,3.gff --input_set_two 3.gff,4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
+
+## Intersection:
+query_pan_genome -a intersection -i 1.gff,2.gff,3.gff 3.gff,4.gff,5.gff,6.gff,7.gff,8.gff,9.gff,10.gff,11.gff,12.gff,13.gff,14.gff,15.gff
+```
+
+
+
 
 
