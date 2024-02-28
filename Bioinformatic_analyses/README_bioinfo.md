@@ -81,7 +81,7 @@ Then, we execute the script ```roary_plots.py``` found in the Roary GitHub (<htt
 python $directory_script/roary_plots.py $directory_output_roary/roary_out/accessory_binary_genes.fa.newick $directory_output_roary/roary_out/gene_presence_absence.csv
 ```
 
-Comparison between between the 3 resistant and the 15 Rickettsia strains were investigated using the ```query-pan-genome``` command line implemented in Roary (with the ```-a difference``` and ```-a intersection``` options)
+Comparison between between the 3 resistant and the 15 *Rickettsia* strains were investigated using the ```query-pan-genome``` command line implemented in Roary (with the ```-a difference``` and ```-a intersection``` options)
 
 ```
 ## Differences :
