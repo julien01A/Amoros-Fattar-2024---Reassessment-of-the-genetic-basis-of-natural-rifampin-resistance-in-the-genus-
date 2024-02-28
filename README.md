@@ -1,4 +1,4 @@
-# Reassessment of the genetic basis of natural rifampin resistance in the genus Rickettsia, Amoros & Fattar et al. 2024
+# Reassessment of the genetic basis of natural rifampin resistance in the genus *Rickettsia*, Amoros & Fattar et al. 2024
 
 In this study, we investigate the natural resistance patterns of *Rickettsia* species to rifampin. To do it, we first evaluate the rifampin effect on the Rickettsia lusitaniae R-Om strain using qPCR. Then, we proceed comparative genomic analysis to explore the genetic basis of natural rifampin resistance.
 
