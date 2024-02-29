@@ -1,7 +1,7 @@
 # Genomic analyses 
 
-## 1 - Construction of the *rpoB* complete gene sequence of *R. lusitaniae* R-Om
-We retrieved the complete sequence of the *rpoB* gene of R. lusitaniae R-Om strain using BWA-MEM (<https://github.com/lh3/bwa>, Li H. (2013), Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. Genomics. doi: 10.48550/arXiv.1303.3997) and MEGAHIT (<https://github.com/voutcn/megahit>, Li D., Liu C-M., Luo R., Sadakane K., and Lam T-W., (2015) MEGAHIT: An ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph. Bioinformatics. doi: 10.1093/bioinformatics/btv033) and the following command lines:
+## 1 - Construction of the *rpoB* complete gene sequence of *Rickettsia lusitaniae* R-Om
+We retrieved the complete sequence of the *rpoB* gene of *R. lusitaniae* R-Om strain using BWA-MEM (<https://github.com/lh3/bwa>, Li H. (2013), Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. Genomics. doi: 10.48550/arXiv.1303.3997) and MEGAHIT (<https://github.com/voutcn/megahit>, Li D., Liu C-M., Luo R., Sadakane K., and Lam T-W., (2015) MEGAHIT: An ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph. Bioinformatics. doi: 10.1093/bioinformatics/btv033). We used the following command lines:
 ```
 bwa index Query_rpoB_gene.fasta
 bwa mem -t 4 Query_rpoB_gene.fasta Metagenome-R1.fastq Metagenome-R2.fastq | samtools view -Sb > Metagenome-outputmapping-rpoB.bam
