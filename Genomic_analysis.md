@@ -1,7 +1,19 @@
 # Genomic analyses 
 
 ## 1 - Construction of the *rpoB* complete gene sequence of *R. lusitaniae* R-Om
-(MARIE)
+We retrieved the complete sequence of the *rpoB* gene of R. lusitaniae R-Om strain using BWA-MEM (<https://github.com/lh3/bwa>, Li H. (2013), Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM. Genomics. doi: 10.48550/arXiv.1303.3997) and MEGAHIT (<https://github.com/voutcn/megahit>, Li D., Liu C-M., Luo R., Sadakane K., and Lam T-W., (2015) MEGAHIT: An ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph. Bioinformatics. doi: 10.1093/bioinformatics/btv033) and the following command lines:
+```
+bwa index Query_rpoB_gene.fasta
+bwa mem -t 4 Query_rpoB_gene.fasta Metagenome-R1.fastq Metagenome-R2.fastq | samtools view -Sb > Metagenome-outputmapping-rpoB.bam
+samtools sort -@ 4 -o Metagenome-outputsorted-rpoB.bam Metagenome-outputmapping-rpoB.bam
+samtools index Metagenome-outputsorted-rpoB.bam
+samtools view -f 1 -F 12 -b -o Metagenome-mapped-rpoB.bam Metagenome-outputsorted-rpoB.bam 
+samtools bam2fq Metagenome-mapped-rpoB.bam > Metagenome-mapped-rpoB.fastq 
+samtools flagstat Metagenome-outputmapping-rpoB.bam > file_rpoB.txt
+
+megahit --12 Metagenome-mapped-rpoB.fastq -o out
+```
+Assembled sequences are manually checked using NCBI database and online BLAST tools to check the assignation of the *Rickettsia* *rpoB* gene sequence.
 
 
 ## 2 - Annotation of *Rickettsia* genomes
