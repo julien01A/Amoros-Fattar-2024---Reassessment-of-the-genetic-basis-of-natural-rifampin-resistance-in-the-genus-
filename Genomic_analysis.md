@@ -66,7 +66,7 @@ Finally, the phylogenetic tree was visualized and modified using figtree (<https
 
 ## 4 - Identification of orthogroups specific to naturally resistant-rifampin *Rickettsia* species
 ### 4.1. Orthofinder
-For this Orthofinder analysis, the command line are the same than the part above. However, we used a subset of the previous dataset, corresponding to **18 *Rickettsia* genomes** for which rifampin-resistance status is documented (*i.e.* n=3 resistant and n=15 suceptible, see TableS2 for details). 
+For this Orthofinder analysis, the command line are the same than the part above (first command line). However, we used a subset of the previous dataset, corresponding to **18 *Rickettsia* genomes** for which rifampin-resistance status is documented (*i.e.* n=3 resistant and n=15 suceptible, see TableS2 for details). 
 
 ### 4.2 Roary
 This tool compares the pangenome of a genome dataset, identifying the core and accessory genomes. Find out more about the tool here: <https://sanger-pathogens.github.io/Roary/>. 
